@@ -1,0 +1,267 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: lightgray;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+body.loaded {
+  opacity: 1;
+}
+
+.video-bg {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.black-hole {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 180px;
+  overflow: hidden;
+  z-index: 5;
+  mix-blend-mode: lighten;
+  pointer-events: none;
+}
+
+.black-hole video {
+  width: 100%;
+  height: 54%;
+  object-fit: cover;
+}
+
+header {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  align-items: center;
+  justify-content: space-between;
+  height: 46px;
+  background-color: rgba(45, 45, 45, 0.25);
+  backdrop-filter: blur(5px);
+  padding: 0 30px;
+  box-shadow: 0 0 15px #FADCC0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #FADCC0;
+  transition: 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: black;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.port {
+  position: absolute;
+  margin-top: 60px;
+  background: none;
+  margin-left: 0;
+}
+
+.dunno {
+  position: absolute;
+  margin-top: 61px;
+  margin-left: 20px;
+  width: 100px;
+  height: 10px;
+  background: none;
+  border-style: solid;
+  border-color: #333333;
+  border-width: 1px;
+  border-radius: 30px;
+}
+
+.gray {
+  margin-top: 1px;
+  margin-left: 1px;
+  color: #474747;
+  font-size: 8px;
+}
+
+.title {
+  margin-top: 80px;
+  margin-left: 20px;
+}
+
+.titles {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+.royal {
+  font-size: 32px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FFF1D5, #FBDDC1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient {
+  font-size: 32px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #F0D2B8, #E1C2AA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.b {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+}
+
+.amplified {
+  font-size: 32px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #FFF1D5, #E1C2AA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+    .glow-button {
+      position: relative;
+      margin-left: 20px;
+      padding: 0.8rem 2.7rem;
+      background: #fff;
+      color: #111;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(255, 220, 120, 0.2);
+      transition: box-shadow 0.3s ease;
+      isolation: isolate;
+    }
+
+    .glow-button span {
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 1px 1px rgba(255,255,255,0.6);
+    }
+
+    .glow {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.3s ease;
+      z-index: 1;
+      background: radial-gradient(
+        circle,
+        rgba(255, 230, 120, 0.5) 0%,
+        rgba(255, 200, 70, 0.3) 30%,
+        rgba(255, 180, 40, 0.1) 60%,
+        rgba(0, 0, 0, 0) 80%
+      );
+      filter: blur(20px);
+    }
+
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 9999;
+  animation: sparkle-fade 1.6s ease-out forwards;
+  box-shadow: 0 0 6px 2px white;
+}
+
+@keyframes sparkle-fade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
