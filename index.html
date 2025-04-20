@@ -1,42 +1,58 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
   <title>AT Pages</title>
 </head>
 <body>
-    <video autoplay muted loop plays inline class="video-bg">
-      <source src="galaxy.mp4"></video>
-  <div class="black-hole">
-  <video autoplay muted loop>
-    <source src="blackhole.mp4" type="video/mp4" />
-  </video>
-</div>
-    <header>
+  <nav class="navbar">
     <a href="#" class="logo">AT Pages</a>
     <div class="menu-toggle">☰</div>
     <ul class="nav-links">
-    <li><a href="#">ABOUT</a></li>
-    <li><a href="#">CONTACT US</a></li>
+      <li><a href="#homes">Home</a></li>
+      <li><a href="#projectss">Projects</a></li>
+      <li><a href="#abouts">About</a></li>
+      <li><a href="#con">Contact</a></li>
     </ul>
-      </div>
-    </header>
-  <div class="port">
-    <div class="dunno">
-      <p class="gray">  Web Developer Portfolio...</p>
+  </nav>
+
+  <div id="homes" class="container scroll-animate">
+    <div class="cardone">
+      <p class="best">Providing the best<br>Project<span class="overlay"> Experience</span></p>
+      <p class="what">What can I do for you?</p>
+      <p class="can">• Build fast and responsive<br>websites</p>
+      <div class="image"><img class="imag" src="imag.jpg" alt="website"></div>
     </div>
-    <div class="title">
-      <p><span class="titles">Providing</span><span class="royal"> the </span><span class="gradient">best</span><br><span class="b">Project </span><span class="amplified">Experience</span></p>
-      <p class="para">I'm a web developer.<br>Checkout my Projects.</p>
-      <button class="glow-button" onclick="window.location.href='projects.html'">
-        <span>Projects</span>
-        <div class="glow"></div>
-      </button>
+    <div class="cardtwo scroll-animate">
+      <h3 class="proj">Recent Projects</h3>
+      <p class="front">I'm a front-end developer<br>specializing in building fast<br>and responsive websites</p>
+      <button class="work" onclick="scrollToSection('secproj')">View Projects</button>
+      <h3 class="testim">Testimonials</h3>
+      <div class="testi">
+      </div>
     </div>
   </div>
-  <script type="text/javascript" src="script.js"></script>
+  <section id="projectss" class="pagetwo scroll-animate">
+    <div class="secproj">
+      <h2 class="hpro">Projects:</h2>
+    </div>
+  </section>
+  <section id="abouts" class="aboutse scroll-animate">
+    <div class="aboutsec">
+      <h2 class="habt">About:</h2>
+      <p class="rabt">I write code the way artists sketch — from scratch, with soul.<br>No fancy design tools, no drag-and-drop magic. Just HTML, CSS, and JavaScript, flowing straight from brain to browser. I don’t “build websites,” I engineer front-end worlds — responsive, reactive, and ridiculously clean.<br>While others push pixels in design software, I see the layout in my head and bring it to life with lines of code. My process? Simple: open a blank file, breathe in creativity, and start typing.
+I believe the web should be fast, beautiful, and human. And I craft each component like it matters — because it does.<br>Currently cooking up something weird, wild, and wonderfully interactive.<br><br><span class="rabts">— stay tuned.</span></p>
+    </div>
+  </section>
+  <section id="con" class="contse scroll-animate">
+    <div id="cont" class="consec">
+      <h2 class hcontu>Contact us:</h2>
+      <div class="icont"><img src="icont.jpg" alt="contact form cannot be loaded"></div>
+    </div>
+  </section>
+  <script src="script.js"></script>
 </body>
 </html>
