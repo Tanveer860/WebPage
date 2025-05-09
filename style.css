@@ -176,26 +176,26 @@ body.loaded {
 .instalogo {
   width: 30px;
   height: 30px;
-  background-image: url('essen/instaol.png');
+  background-image: url('instaol.png');
   background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease;
 }
 .instalogo:hover {
-  background-image: url('essen/instagl.png');
+  background-image: url('instagl.png');
   scale: 1.05;
 }
 
 .ytlogo {
   width: 30px;
   height: 30px;
-  background-image: url('essen/ytol.png');
+  background-image: url('ytol.png');
   background-size: cover;
   background-position: center;
   transition: background-image 0.3s ease;
 }
 .ytlogo:hover {
-  background-image: url('essen/ytgl.png');
+  background-image: url('ytgl.png');
   scale: 1.05;
 }
 
